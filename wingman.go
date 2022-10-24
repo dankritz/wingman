@@ -13,6 +13,7 @@ func main() {
 		os.Exit(3)
 	}
 	var stockCode string
+	fmt.Printf("Wingman v%v\n\n", VERSION)
 	fmt.Printf("Enter a stock code or CTRL+C to quit (eg. AAPL): ")
 	fmt.Scanln(&stockCode)
 	DisplayCLI(stockCode)

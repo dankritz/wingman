@@ -35,10 +35,11 @@ func DisplayCLI(stockCode string) {
 	}
 	fmt.Printf("\n\n\n")
 	fmt.Printf("What the experts say:\n")
+	if len(stockGrade) == 0 {
+		fmt.Printf("No expect analysis is available for this code.")
+	}
 	for i, _ := range stockGrade {
 		fmt.Printf("	%v. %v (%v)\n		Current Rating: %v | Previous Rating: %v\n", i+1, stockGrade[i].GradingCompany, stockGrade[i].Date, stockGrade[i].NewGrade, stockGrade[i].PreviousGrade)
 	}
-	
-
 	fmt.Printf("\n\n----------------------------\n\n")
 }

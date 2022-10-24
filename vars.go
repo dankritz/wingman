@@ -6,6 +6,7 @@ import (
 
 var APIKEY string = "" // This will be imported from ./api.key by ReadAPIKey()
 const BASEURL string = "https://financialmodelingprep.com/api/"
+const VERSION string = "0.0.2"
 
 // Define a struct for the data we will get when requesting a Stock Quiot
 type Stock struct {
