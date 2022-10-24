@@ -5,7 +5,7 @@ import (
 )
 
 var APIKEY string = "" // This will be imported from ./api.key by ReadAPIKey()
-const BASEURL string = "https://financialmodelingprep.com/api/v3"
+const BASEURL string = "https://financialmodelingprep.com/api/"
 
 // Define a struct for the data we will get when requesting a Stock Quiot
 type Stock struct {
@@ -30,6 +30,19 @@ type Stock struct {
 	Pe float32 					`json:"pe"`
 	EarningsAnnouncement string `json:"earningsAnnoucement"`
 	Timestamp uint32 			`json:"timestamp"`
+}
+
+type Peers struct {
+	Symbol string 				`json:"symbol"`
+	Peers []string				`json:"peersList"`
+}
+
+type Grade struct {
+	Symbol string				`json:"symbol"`
+	Date string					`json:"date"`
+	GradingCompany string		`json:"gradingCompany"`
+	PreviousGrade string		`json:"previousGrade"`
+	NewGrade string				`json:"newGrade"`
 }
 
 func ReadAPIKey() bool {
