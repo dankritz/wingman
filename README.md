@@ -8,3 +8,11 @@ This tool does not provide you with financial advice! All data provided is for e
 
 ## API-Key
 In order to use Wingman, you will require an API Key from https://site.financialmodelingprep.com/developer. Simply create a file in the project directory called api.key containing ONLY the API key.
+
+## How to run
+You can either download a Linux binary release from our Github page, or you can use Go:
+```
+go run .
+```
+
+
